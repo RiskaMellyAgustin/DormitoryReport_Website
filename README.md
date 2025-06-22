@@ -98,7 +98,6 @@ Akses melalui browser: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 * Laravel
 * Blade Template
 * MySQL / MariaDB
-* TailwindCSS (opsional)
 * PHP 7.4+ / 8.x
 
 ---
