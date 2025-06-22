@@ -7,8 +7,8 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
-      <h1>Pengaduan Masyarakat</h1>
-      <a href="{{ route('pengaduan')}}" class="btn-get-started scrollto">Buat Pengaduan</a>
+      <h1>Online Report PUSH</h1>
+      <a href="{{ route('pengaduan')}}" class="btn-get-started scrollto">Create Your Complaint</a>
     </div>
   </section><!-- End Hero -->
 
@@ -27,25 +27,25 @@
                 <div class="col-xl-3 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bxs-megaphone"></i>
-                    <h4>Tulis Pengaduan</h4>
+                    <h4>Write Your Complaint</h4>
                   </div>
                 </div>
                 <div class="col-xl-3 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-analyse"></i>
-                    <h4>Proses Verifikasi</h4>
+                    <h4>Verification Process</h4>
                   </div>
                 </div>
                 <div class="col-xl-3 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-cube-alt"></i>
-                    <h4>Tindak Lanjut</h4>
+                    <h4>Follow-Up</h4>
                   </div>
                 </div>
                 <div class="col-xl-3 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class='bx bx-check-circle'></i>
-                    <h4>Selesai</h4>
+                    <h4>Success</h4>
                   </div>
                 </div>
               </div>
@@ -66,7 +66,7 @@
             <div class="count-box">
               <i class='bx bx-list-check' ></i>
               <span data-purecounter-start="0" data-purecounter-end="{{ $pengaduan }} " data-purecounter-duration="1" class="purecounter"></span>
-              <p>Semua Pengaduan</p>
+              <p>All Complaints</p>
             </div>
           </div>
 
@@ -74,7 +74,7 @@
             <div class="count-box">
               <i class='bx bx-loader'></i>
               <span data-purecounter-start="0" data-purecounter-end="{{ $proses }}" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Sedang Diproses</p>
+              <p>In The Process</p>
             </div>
           </div>
 
@@ -82,7 +82,7 @@
             <div class="count-box">
               <i class='bx bx-check-circle'></i>
               <span data-purecounter-start="0" data-purecounter-end="{{ $selesai }}" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Selesai</p>
+              <p>Done</p>
             </div>
           </div>
 

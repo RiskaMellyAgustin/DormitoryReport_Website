@@ -29,7 +29,7 @@
                       <div class="card-body">
                         <div class="row">
                           <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Semua Pengaduan</h5>
+                            <h5 class="card-title text-uppercase text-muted mb-0">All Complaints</h5>
                             <span class="h2 font-weight-bold mb-0">{{ $pengaduan }}</span>
                           </div>
                           <div class="col-auto">
@@ -48,7 +48,7 @@
                       <div class="card-body">
                         <div class="row">
                           <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Diproses</h5>
+                            <h5 class="card-title text-uppercase text-muted mb-0">In The Process</h5>
                             <span class="h2 font-weight-bold mb-0">{{ $proses }}</span>
                           </div>
                           <div class="col-auto">
@@ -67,7 +67,7 @@
                       <div class="card-body">
                         <div class="row">
                           <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Selesai</h5>
+                            <h5 class="card-title text-uppercase text-muted mb-0">Done</h5>
                             <span class="h2 font-weight-bold mb-0">{{ $selesai }}</span>
                           </div>
                           <div class="col-auto">
@@ -85,7 +85,7 @@
                       <div class="card-body">
                         <div class="row">
                           <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Total Masyarakat</h5>
+                            <h5 class="card-title text-uppercase text-muted mb-0">Total Student</h5>
                             <span class="h2 font-weight-bold mb-0">{{ $masyarakat }}</span>
                           </div>
                           <div class="col-auto">

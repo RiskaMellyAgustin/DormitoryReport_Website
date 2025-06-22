@@ -17,4 +17,9 @@ class DashboardController extends Controller
             'masyarakat' => Masyarakat::count(),
         ]);
     }
+
+    
+
+
+
 }

@@ -8,6 +8,7 @@ use App\Models\Masyarakat;
 use App\Models\Pengaduan;
 use App\Models\Petugas;
 use App\Models\Province;
+use App\Models\Report; // Added to resolve the unknown class error
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -147,7 +148,7 @@ class UserController extends Controller
         $data = $request->all();
 
         $validate = Validator::make($data, [
-            'nik' => ['required', 'min:16', 'max:16', 'unique:masyarakat'],
+            'nik' => ['required', 'min:12', 'max:16', 'unique:masyarakat'],
             'name' => ['required', 'string'],
             'email' => ['required', 'email', 'string', 'unique:masyarakat'],
             'username' => ['required', 'string', 'regex:/^\S*$/u', 'unique:masyarakat', 'unique:petugas,username'],
@@ -155,13 +156,13 @@ class UserController extends Controller
             'password' => ['required', 'min:6'],
             'telp' => ['required', 'regex:/(08)[0-9]/'],
             'alamat' => ['required'],
-            'rt' => ['required'],
-            'rw' => ['required'],
-            'kode_pos' => ['required'],
-            'province_id' => ['required'],
-            'regency_id' => ['required'],
-            'district_id' => ['required'],
-            'village_id' => ['required'],
+            // 'rt' => ['required'],
+            // 'rw' => ['required'],
+            // 'kode_pos' => ['required'],
+            // 'province_id' => ['required'],
+            // 'regency_id' => ['required'],
+            // 'district_id' => ['required'],
+            // 'village_id' => ['required'],
         ]);
 
         if ($validate->fails()) {
@@ -178,13 +179,13 @@ class UserController extends Controller
             'telp' => $data['telp'],
             'alamat' => $data['alamat'],
             'email_verified_at' => Carbon::now(),
-            'rt' => $data['rt'],
-            'rw' => $data['rw'],
-            'kode_pos' => $data['kode_pos'],
-            'province_id' => $data['province_id'],
-            'regency_id' => $data['regency_id'],
-            'district_id' => $data['district_id'],
-            'village_id' => $data['village_id'],
+            // 'rt' => $data['rt'],
+            // 'rw' => $data['rw'],
+            // 'kode_pos' => $data['kode_pos'],
+            // 'province_id' => $data['province_id'],
+            // 'regency_id' => $data['regency_id'],
+            // 'district_id' => $data['district_id'],
+            // 'village_id' => $data['village_id'],
         ]);
 
         $masyarakat = Masyarakat::where('email', $data['email'])->first();
@@ -457,5 +458,29 @@ class UserController extends Controller
             'village_id' => $data['village_id'],
         ]);
         return redirect()->back()->with(['pesan' => 'Profil berhasil diubah!', 'type' => 'success']);
+    }
+
+    public function delete($id)
+    {
+        try {
+            // Cari pengaduan berdasarkan ID. Jika tidak ditemukan, akan menghasilkan exception.
+            $pengaduan = Pengaduan::findOrFail($id);
+            
+            // Hapus pengaduan dari basis data.
+            $pengaduan->delete();
+    
+            // Jika penghapusan berhasil, kembalikan respons JSON dengan pesan sukses.
+            return response()->json(['message' => 'Pengaduan berhasil dihapus'], 200);
+        } catch (\Exception $e) {
+            // Tangkap exception dan kembalikan respons JSON dengan pesan error.
+            return response()->json(['message' => 'Gagal menghapus pengaduan: ' . $e->getMessage()], 500);
+        }
+    }
+    
+    public function deleteReport($id)
+    {
+        $report = Report::findOrFail($id);
+        $report->delete();
+        return redirect()->back()->with('success', 'Laporan berhasil dihapus.');
     }
 }

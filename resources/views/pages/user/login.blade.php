@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Login | Pengaduan Masyarakat</title>
+  <title>Login | ONLINE REPORT PUSH</title>
 
   @stack('prepend-style')
   @include('includes.admin.style')
@@ -18,7 +18,7 @@
   <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
     <div class="container">
       <a class="navbar-brand" href="/">
-        Pengaduan Masyarakat
+        ONLINE REPORT PUSH
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@
         <div class="navbar-collapse-header">
           <div class="row">
             <div class="col-6 collapse-brand">
-              <a href="/"> Pengaduan Masyarakat</a>
+              <a href="/"> ONLINE REPORT PUSH</a>
             </div>
             <div class="col-6 collapse-close">
               <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,13 +57,13 @@
   <!-- Main content -->
   <div class="main-content">
     <!-- Header -->
-    <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
+    <div class="header bg-gradient-primary py-4 py-lg-6 pt-lg-7">
       <div class="container">
         <div class="header-body text-center mb-7">
           <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6 col-md-8 px-5">
               <h1 class="text-white">Login</h1>
-              <p class="text-lead text-white">Silahkan login menggunakan akun yang sudah didaftarkan.</p>
+              <p class="text-lead text-white">Please log in using the account that has been registered or you can use your President University account</p>
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@
               {{-- <a href="#" class="text-light"><small>Lupa password?</small></a> --}}
             </div>
             <div class="col-6 text-right">
-              <a href="{{ url('register')}}" class="text-light"><small>Buat akun baru</small></a>
+              <a href="{{ url('register')}}" class="text-light"><small>Register</small></a>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@
     <div class="container">
 
           <div class="copyright text-center text-muted">
-            &copy; Copyright <strong><span><a href="" target="_blank">Bayu Prayoga</a></span></strong>. SMK Informatika Utama
+            &copy; Copyright <strong><span><a href="" target="_blank">PresidentUniversityStudentHousing</a></span></strong>
           </div>
     </div>
   </footer>

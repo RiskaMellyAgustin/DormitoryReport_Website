@@ -18017,7 +18017,7 @@ button.bg-indigo:focus {
 }
 
 .bg-purple {
-  background-color: #8965e0 !important;
+  background-color: #324cdd!important;
 }
 
 a.bg-purple:hover, a.bg-purple:focus,
@@ -18147,7 +18147,7 @@ button.bg-lighter:focus {
 }
 
 .bg-gradient-primary {
-  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+  background: linear-gradient(87deg, #5e72e4 0, #7e0c3b 100%) !important;
 }
 
 .bg-gradient-secondary {
@@ -18195,7 +18195,7 @@ button.bg-lighter:focus {
 }
 
 .bg-gradient-blue {
-  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+  background: linear-gradient(87deg, #5e72e4 0, #7e0c3b 100%) !important;
 }
 
 .bg-gradient-indigo {
@@ -18425,7 +18425,7 @@ button.section-darker:focus {
 }
 
 .bg-gradient-primary {
-  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+  background: linear-gradient(87deg, #5e72e4 0, #7e0c3b 100%) !important;
 }
 
 .bg-gradient-secondary {

@@ -12,7 +12,7 @@
           <div class="header-body">
             <div class="row align-items-center py-4">
               <div class="col-lg-6 col-7">
-                <h6 class="h2 text-white d-inline-block mb-0">Pengaduan</h6>
+                <h6 class="h2 text-white d-inline-block mb-0">REPORT COMPLAINT</h6>
                 <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                   {{-- <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                     <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
@@ -31,7 +31,7 @@
             <div class="card">
               <!-- Card header -->
               <div class="card-header border-0">
-                <h3 class="mb-0">Data Pengaduan</h3>
+                <h3 class="mb-0">Data Of The Report</h3>
               </div>
               <!-- Light table -->
               <div class="table-responsive">
@@ -39,11 +39,11 @@
                   <thead class="thead-light">
                     <tr>
                       <th scope="col" class="sort" data-sort="no">No</th>
-                      <th scope="col" class="sort" data-sort="tanggal">Tanggal</th>
-                      <th scope="col" class="sort" data-sort="name">Nama</th>
-                      <th scope="col" class="sort" data-sort="isi">Isi Laporan</th>
+                      <th scope="col" class="sort" data-sort="tanggal">Date</th>
+                      <th scope="col" class="sort" data-sort="name">Name</th>
+                      <th scope="col" class="sort" data-sort="isi">Report content</th>
                       <th scope="col" class="sort" data-sort="status">Status</th>
-                      <th scope="col" class="sort" data-sort="action">Aksi</th>
+                      <th scope="col" class="sort" data-sort="action">Action</th>
                     </tr>
                   </thead>
                   <tbody class="list">
@@ -65,19 +65,19 @@
                             @if($v->status == '0')
                                 <span class="text-sm badge badge-danger">Pending</span>
                             @elseif($v->status == 'proses')
-                                <span class="text-sm badge badge-warning">Proses</span>
+                                <span class="text-sm badge badge-warning">On Process</span>
                             @else
-                                <span class="text-sm badge badge-success">Selesai</span>
+                                <span class="text-sm badge badge-success">Done</span>
                             @endif
                           </div>
                         </td>
                         @if ($status == '0')
                             <td>
-                                <a href="#" data-id_pengaduan="{{ $v->id_pengaduan }}" class="btn btn-primary pengaduan">Verifikasi</a>
-                                <a href="#" data-id_pengaduan="{{ $v->id_pengaduan }}" class="btn btn-danger pengaduanDelete">Hapus</a>
+                                <a href="#" data-id_pengaduan="{{ $v->id_pengaduan }}" class="btn btn-primary pengaduan">Verification</a>
+                                <!-- <a href="#" data-id_pengaduan="{{ $v->id_pengaduan }}" class="btn btn-danger pengaduanDelete">Delete</a> -->
                             </td>
                         @else
-                            <td><a href="{{ route('pengaduan.show', $v->id_pengaduan)}}" class="btn btn-info">Lihat</a></td>
+                            <td><a href="{{ route('pengaduan.show', $v->id_pengaduan)}}" class="btn btn-info">Detail</a></td>
                         @endif
                       </tr>
 
@@ -135,8 +135,8 @@
         e.preventDefault();
         let id_pengaduan = $(this).data('id_pengaduan');
         Swal.fire({
-                title: 'Peringatan!',
-                text: "Apakah Anda yakin akan memverifikasi pengaduan?",
+                title: 'Warning!',
+                text: "Are you sure you want to verify the complaint?",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#28B7B5',
@@ -155,8 +155,8 @@
                     success: function (response) {
                         if (response == 'success') {
                             Swal.fire({
-                                title: 'Pemberitahuan!',
-                                text: "Pengaduan berhasil diverifikasi!",
+                                title: 'Announcement!',
+                                text: "Complaint successfully verified!",
                                 icon: 'success',
                                 confirmButtonColor: '#28B7B5',
                                 confirmButtonText: 'OK',
@@ -171,8 +171,8 @@
                     },
                     error: function (data) {
                         Swal.fire({
-                            title: 'Pemberitahuan!',
-                            text: "Pengaduan gagal diverifikasi!",
+                            title: 'Announcement!',
+                            text: "Complaint failed to verify!",
                             icon: 'error',
                             confirmButtonColor: '#28B7B5',
                             confirmButtonText: 'OK',
@@ -181,8 +181,8 @@
                 });
             } else {
                 Swal.fire({
-                    title: 'Pemberitahuan!',
-                    text: "Pengaduan gagal diverifikasi!",
+                    title: 'Announcement!',
+                    text: "Complaint failed to verify!",
                     icon: 'error',
                     confirmButtonColor: '#28B7B5',
                     confirmButtonText: 'OK',
@@ -195,8 +195,8 @@
         e.preventDefault();
         let id_pengaduan = $(this).data('id_pengaduan');
         Swal.fire({
-                title: 'Peringatan!',
-                text: "Apakah Anda yakin akan menghapus pengaduan?",
+                title: 'Warning',
+                text: "Are you sure you want to delete the complaint?",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#28B7B5',
@@ -213,8 +213,8 @@
                     success: function (response) {
                         if (response == 'success') {
                             Swal.fire({
-                                title: 'Pemberitahuan!',
-                                text: "Pengaduan berhasil dihapus!",
+                                title: 'Announcement!',
+                                text: "Complaint successfully deleted!",
                                 icon: 'success',
                                 confirmButtonColor: '#28B7B5',
                                 confirmButtonText: 'OK',
@@ -229,8 +229,8 @@
                     },
                     error: function (data) {
                         Swal.fire({
-                            title: 'Pemberitahuan!',
-                            text: "Pengaduan gagal dihapus!",
+                            title: 'Announcement!',
+                            text: "Complaint failed to delete!",
                             icon: 'error',
                             confirmButtonColor: '#28B7B5',
                             confirmButtonText: 'OK',
@@ -239,8 +239,8 @@
                 });
             } else {
                 Swal.fire({
-                    title: 'Pemberitahuan!',
-                    text: "Pengaduan gagal dihapus!",
+                    title: 'Announcement!',
+                    text: "Complaint failed to delete!",
                     icon: 'error',
                     confirmButtonColor: '#28B7B5',
                     confirmButtonText: 'OK',

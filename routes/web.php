@@ -40,11 +40,14 @@ Route::middleware(['isMasyarakat'])->group(function () {
      // Logout Masyarakat
      Route::get('/logout', [\App\Http\Controllers\User\UserController::class, 'logout'])->name('user.logout');
 
-
      Route::get('/laporan/{who?}', [\App\Http\Controllers\User\UserController::class, 'laporan'])->name('pengaduan.laporan');
      Route::get('/pengaduan-detail/{id_pengaduan}', [\App\Http\Controllers\User\UserController::class, 'detailPengaduan'])->name('pengaduan.detail');
+    //  Route::get('/pengaduan/konfirmasi-hapus/{id_pengaduan}', [\App\Http\Controllers\User\UserController::class, 'konfirmasiHapus'])->name('pengaduan.konfirmasi-hapus');
+     // Re-enable the delete route
+    //  Route::delete('/pengaduan/delete/{id_pengaduan}', [\App\Http\Controllers\User\UserController::class, 'delete'])->name('pengaduan.delete');
+     // Add delete report route for user reports
+     Route::get('/user/report/{id}', [\App\Http\Controllers\User\UserController::class, 'deleteReport'])->name('pengaduan.delete');
 });
-
 
 Route::prefix('admin')->group( function() {
     Route::middleware('isAdmin')->group( function() {
@@ -73,7 +76,7 @@ Route::prefix('admin')->group( function() {
      });
 
 
-    Route::middleware(['isGuest'])->group(function () {
+    Route::middleware(['isGuest'])->group(function () { 
         Route::get('/', [\App\Http\Controllers\Admin\AdminController::class, 'formLogin'])->name('admin.masuk');
         Route::post('/login', [\App\Http\Controllers\Admin\AdminController::class, 'login'])->name('admin.login');
     });

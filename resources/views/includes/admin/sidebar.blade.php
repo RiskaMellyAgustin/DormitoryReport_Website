@@ -4,7 +4,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="{{ route('dashboard')}}">
-          <h2 class="text-primary text-uppercase">Pengaduan UKK</h2>
+          <h2 class="text-primary text-uppercase">PUSH-Report</h2>
         </a>
       </div>
       <div class="navbar-inner">
@@ -20,45 +20,47 @@
             </li>
             <li class="nav-item nav-with-child">
                 <a class="nav-link {{ (request()->segment(2) == 'pengaduan') ? 'active' : '' }}" href="#">
-                  <i class="fas fa-bullhorn text-orange"></i> Pengaduan
+                  <i class="fas fa-bullhorn text-orange"></i> Report Complaint
                   <i class="text-right fas fa-chevron-down"></i>
                 </a>
                 <ul class="nav-item-child">
                   <li class="nav-item">
                     <a class="nav-link {{ (request()->segment(2) == 'pengaduan/0') ? 'active' : '' }}" href="{{ route('pengaduan.index', '0')}}">
-                        <i class="fas fa-clipboard-check text-info"></i> Verifikasi & Validasi
+                        <i class="fas fa-clipboard-check text-info"></i> Verification & Validation
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{{ route('pengaduan.index', 'proses')}}">
-                        <i class="fas fa-sync text-yellow"></i> Sedang Diproses
+                        <i class="fas fa-sync text-yellow"></i> On Process
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{{ route('pengaduan.index', 'selesai')}}">
-                        <i class="fas fa-check text-success"></i> Selesai
+                        <i class="fas fa-check text-success"></i> Done
                     </a>
                   </li>
                 </ul>
               </li>
+             @if( Auth::guard('admin')->user()->roles == 'admin')
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('laporan.index')}}">
                   <i class="fas fa-file-alt text-green"></i>
-                  <span class="nav-link-text">Laporan</span>
+                  <span class="nav-link-text">Report</span>
                 </a>
               </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('masyarakat.index')}}">
                 <i class="fas fa-users text-default"></i>
-                <span class="nav-link-text">Masyarakat</span>
+                <span class="nav-link-text">Student</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('petugas.index')}} ">
                 <i class="fas fa-users-cog text-info"></i>
-                <span class="nav-link-text">Petugas</span>
+                <span class="nav-link-text"></span>Officer
               </a>
             </li>
+             @endif
           </ul>
 
         </div>

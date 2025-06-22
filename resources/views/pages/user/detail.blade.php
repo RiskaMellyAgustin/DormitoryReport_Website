@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card card-responsive p-4 border-0 shadow rounded mx-auto">
-                    <h5><b>Data Pelapor</b></h5>
+                    <h5><b>User Data</b></h5>
                     <p>
                     {{ $pengaduan->user->name }} <br>
                     {{ Carbon\Carbon::parse($pengaduan->tgl_kejadian)->format('d F Y') }} <br>

@@ -12,7 +12,7 @@
           <div class="header-body">
             <div class="row align-items-center py-4">
               <div class="col-lg-6 col-7">
-                <h6 class="h2 text-white d-inline-block mb-0">Masyarakat</h6>
+                <h6 class="h2 text-white d-inline-block mb-0">STUDENT</h6>
                 <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                   {{-- <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                     <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
@@ -31,7 +31,7 @@
             <div class="card">
               <!-- Card header -->
               <div class="card-header border-0 d-flex justify-content-between">
-                <h3 class="mb-0">Data Masyarakat</h3>
+                <h3 class="mb-0"> Student Data</h3>
               </div>
               <!-- Light table -->
               <div class="table-responsive">
@@ -39,11 +39,11 @@
                   <thead class="thead-light">
                     <tr>
                       <th scope="col" class="sort" data-sort="no">No</th>
-                      <th scope="col" class="sort" data-sort="no">NIK</th>
-                      <th scope="col" class="sort" data-sort="name">Nama</th>
+                      <th scope="col" class="sort" data-sort="no">Student ID</th>
+                      <th scope="col" class="sort" data-sort="name">Name</th>
                       <th scope="col" class="sort" data-sort="username">username</th>
-                      <th scope="col" class="sort" data-sort="tlp">No Telpon</th>
-                      <th scope="col" class="sort" data-sort="action">Aksi</th>
+                      <th scope="col" class="sort" data-sort="tlp">Phone Number</th>
+                      <th scope="col" class="sort" data-sort="action">Action</th>
                     </tr>
                   </thead>
                   <tbody class="list">
@@ -59,7 +59,7 @@
                         <td><span class="text-sm">{{ $mas->telp}}</span></td>
                         <td style="width: 100px;">
                             <a href="{{ route('masyarakat.show', $mas->nik)}}" class="btn btn-sm btn-info">Detail</a>
-                            <a href="#" data-nik="{{ $mas->nik }}" class="btn btn-sm btn-danger masyarakatDelete">Hapus</a>
+                            <a href="#" data-nik="{{ $mas->nik }}" class="btn btn-sm btn-danger masyarakatDelete">Delete</a>
                         </td>
                       </tr>
 
@@ -119,8 +119,8 @@
         e.preventDefault();
         let nik = $(this).data('nik');
         Swal.fire({
-                title: 'Peringatan!',
-                text: "Apakah Anda yakin akan menghapus masyarakat?",
+                title: 'Warning!',
+                text: "Are you sure you want to delete the student?",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#28B7B5',
@@ -137,8 +137,8 @@
                     success: function (response) {
                         if (response == 'success') {
                             Swal.fire({
-                                title: 'Pemberitahuan!',
-                                text: "Masyarakat berhasil dihapus!",
+                                title: 'Announcement!',
+                                text: "Student successfully deleted!",
                                 icon: 'success',
                                 confirmButtonColor: '#28B7B5',
                                 confirmButtonText: 'OK',
@@ -153,8 +153,8 @@
                     },
                     error: function (data) {
                         Swal.fire({
-                            title: 'Pemberitahuan!',
-                            text: "Masyarakat gagal dihapus!",
+                            title: '',
+                            text: "Failed student removed!",
                             icon: 'error',
                             confirmButtonColor: '#28B7B5',
                             confirmButtonText: 'OK',
@@ -163,8 +163,8 @@
                 });
             } else {
                 Swal.fire({
-                    title: 'Pemberitahuan!',
-                    text: "Masyarakat gagal dihapus!",
+                    title: 'Announcement!',
+                    text: "Failed student removed!",
                     icon: 'error',
                     confirmButtonColor: '#28B7B5',
                     confirmButtonText: 'OK',

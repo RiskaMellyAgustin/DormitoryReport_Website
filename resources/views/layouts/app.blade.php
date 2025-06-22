@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>@yield('title') | Pengaduan Masyarakat</title>
+  <title>@yield('title') | ONLINE REPORT PUSH </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -52,15 +52,15 @@
    <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="/">Pengaduan Masyarakat</a></h1>
+      <h1 class="logo me-auto"><a href="/">ONLINE REPORT PUSH</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0 ">
         <ul>
-          <li><a class="nav-link scrollto {{ (request()->is('/pengaduan')) ? 'active' : '' }}" href="{{ route('pengaduan')}}">Buat Pengaduan</a></li>
+          <li><a class="nav-link scrollto {{ (request()->is('/pengaduan')) ? 'active' : '' }}" href="{{ route('pengaduan')}}">Create Your Problem</a></li>
           {{-- <li><a class="nav-link scrollto {{ (request()->is('tentang')) ? 'active' : '' }}" href="{{ url('tentang')}}">Tentang</a></li> --}}
-          <li><a class="nav-link scrollto {{ (request()->is('pengaduan.laporan')) ? 'active' : '' }}" href="{{ route('pengaduan.laporan', 'saya')}}">Pengaduan Saya</a></li>
+          <li><a class="nav-link scrollto {{ (request()->is('pengaduan.laporan')) ? 'active' : '' }}" href="{{ route('pengaduan.laporan', 'saya')}}">Report Me</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -84,12 +84,12 @@
         <div class="row justify-content-between">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Pengaduan Masyarakat</h3>
-            <p>
+            <h3>ONLINE REPORT PUSH</h3>
+            <!-- <p>
               Bayu Prayoga<br>
-              SMK Informatika Utama<br>
+              My Web<br>
 
-            </p>
+            </p> -->
           </div>
 
           {{-- <div class="col-lg-2 col-md-6 footer-links">
@@ -119,7 +119,7 @@
 
       <div class="me-md-auto my-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span><a href="" target="_blank">Bayu Prayoga</a></span></strong>. SMK Informatika Utama
+          &copy; Copyright <strong><span><a href="" target="_blank">PresidentUniversityStudentHousing</a></span></strong>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">

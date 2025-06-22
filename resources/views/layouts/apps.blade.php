@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>@yield('title') | Pengaduan Masyarakat</title>
+  <title>@yield('title') | ONLINE REPORT PUSH</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -52,7 +52,7 @@
    <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="/">Pengaduan Masyarakat</a></h1>
+      <h1 class="logo me-auto"><a href="/">ONLINE REPORT PUSH</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -84,10 +84,10 @@
         <div class="row justify-content-between">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>PENGADUAN MASYARAKAT</h3>
+            <h3>ONLINE REPORT PUSH</h3>
             <p>
-              Bayu Prayoga<br>
-              SMK Informatika Utama<br>
+              President University<br>
+              Dormitory<br>
 
             </p>
           </div>
@@ -102,11 +102,11 @@
           </div> --}}
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Kontak</h4>
+            <h4>Contact</h4>
             <ul>
               <p>
                 <strong>Phone:</strong> +62 85526289490<br>
-                <strong>Email:</strong> prayogabayu062@gmail.com<br>
+                <strong>Email:</strong> pushpresident@gmail.com<br>
               </p>
             </ul>
           </div>
@@ -119,13 +119,13 @@
 
       <div class="me-md-auto my-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span><a href="" target="_blank">Bayu Prayoga</a></span></strong>. SMK Informatika Utama
+          &copy; Copyright <strong><span><a href="" target="_blank">PresidentUniversityStudentHousing</a></span></strong>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://github.com/BayuPrayoga62" class="github"><i class="bx bxl-github"></i></a>
-        <a href="https://www.instagram.com/ubayprayoga_/" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/bayu-prayoga-b000a121a/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <!-- <a href="https://github.com/BayuPrayoga62" class="github"><i class="bx bxl-github"></i></a> -->
+        <a href="https://www.instagram.com/push_dormitory/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <!-- <a href="https://www.linkedin.com/in/bayu-prayoga-b000a121a/" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
       </div>
     </div>
   </footer><!-- End Footer -->

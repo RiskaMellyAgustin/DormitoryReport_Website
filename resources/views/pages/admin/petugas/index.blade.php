@@ -12,7 +12,7 @@
           <div class="header-body">
             <div class="row align-items-center py-4">
               <div class="col-lg-6 col-7">
-                <h6 class="h2 text-white d-inline-block mb-0">Petugas</h6>
+                <h6 class="h2 text-white d-inline-block mb-0">OFFICER</h6>
                 <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                   {{-- <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                     <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
@@ -31,8 +31,8 @@
             <div class="card">
               <!-- Card header -->
               <div class="card-header border-0 d-flex justify-content-between">
-                <h3 class="mb-0">Data Pengaduan</h3>
-                <a href="{{ route('petugas.create')}}" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Petugas</a>
+                <h3 class="mb-0">Report Data</h3>
+                <a href="{{ route('petugas.create')}}" class="btn btn-primary"><i class="fas fa-plus"></i> Add Officer</a>
               </div>
               <!-- Light table -->
               <div class="table-responsive">
@@ -40,11 +40,11 @@
                   <thead class="thead-light">
                     <tr>
                       <th scope="col" class="sort" data-sort="no">No</th>
-                      <th scope="col" class="sort" data-sort="name">Nama Petugas</th>
+                      <th scope="col" class="sort" data-sort="name">Officer Name</th>
                       <th scope="col" class="sort" data-sort="username">username</th>
                       <th scope="col" class="sort" data-sort="tlp">No Telpon</th>
                       <th scope="col" class="sort" data-sort="role">Role</th>
-                      <th scope="col" class="sort" data-sort="action">Aksi</th>
+                      <th scope="col" class="sort" data-sort="action">Action</th>
                     </tr>
                   </thead>
                   <tbody class="list">
@@ -60,7 +60,7 @@
                         <td><span class="text-sm">{{ $pet->roles}}</span></td>
                         <td style="width: 100px;">
                             <a href="{{ route('petugas.edit', $pet->id_petugas)}}" class="btn btn-sm btn-warning">Edit</a>
-                            <a href="#" data-id_petugas="{{ $pet->id_petugas }}" class="btn btn-sm btn-danger petugasDelete">Hapus</a>
+                            <a href="#" data-id_petugas="{{ $pet->id_petugas }}" class="btn btn-sm btn-danger petugasDelete">Delete</a>
                         </td>
                       </tr>
 
@@ -138,8 +138,8 @@
                     success: function (response) {
                         if (response == 'success') {
                             Swal.fire({
-                                title: 'Pemberitahuan!',
-                                text: "Petugas berhasil dihapus!",
+                                title: 'Announcement!',
+                                text: "Officer successfully removed!",
                                 icon: 'success',
                                 confirmButtonColor: '#28B7B5',
                                 confirmButtonText: 'OK',
@@ -154,8 +154,8 @@
                     },
                     error: function (data) {
                         Swal.fire({
-                            title: 'Pemberitahuan!',
-                            text: "Petugas gagal dihapus!",
+                            title: 'Announcement',
+                            text: "Officer failed to delete!",
                             icon: 'error',
                             confirmButtonColor: '#28B7B5',
                             confirmButtonText: 'OK',
@@ -164,8 +164,8 @@
                 });
             } else {
                 Swal.fire({
-                    title: 'Pemberitahuan!',
-                    text: "Petugas gagal dihapus!",
+                    title: 'Announcement!',
+                    text: "Officer failed to delete!",
                     icon: 'error',
                     confirmButtonColor: '#28B7B5',
                     confirmButtonText: 'OK',

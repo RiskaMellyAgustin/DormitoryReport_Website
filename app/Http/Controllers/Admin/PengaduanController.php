@@ -28,19 +28,22 @@ class PengaduanController extends Controller
     }
 
     public function destroy(Request $request, $id_pengaduan) {
-
-        if($id_pengaduan = 'id_pengaduan') {
-            $id_pengaduan = $request->id_pengaduan;
-        }
-
-        $pengaduan = Pengaduan::find($id_pengaduan);
+        $pengaduan = Pengaduan::findOrFail($id_pengaduan); // Menggunakan findOrFail
 
         $pengaduan->delete();
 
-        if($request->ajax()) {
-            return 'success';
+        if ($request->ajax()) {
+            return response()->json(['success' => 'Pengaduan berhasil dihapus']);
         }
 
-        return redirect()->route('pengaduan.index');
+        return redirect()->route('pengaduan.index')->with('success', 'Pengaduan berhasil dihapus.');
     }
+
+    // public function delete($id)
+    // {
+    //     $pengaduan = Pengaduan::findOrFail($id);
+    //     $pengaduan->delete();
+    //     return redirect()->route('nama.route.daftar.laporan')->with('success', 'Pengaduan berhasil dihapus');
+    // }
+
 }

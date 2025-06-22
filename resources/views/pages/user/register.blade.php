@@ -7,7 +7,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Login | Pengaduan Masyarakat</title>
+  <title>Login | ONLINE REPORT PUSH</title>
 
   @stack('prepend-style')
   @include('includes.admin.style')
@@ -19,7 +19,7 @@
   <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
     <div class="container">
       <a class="navbar-brand" href="/">
-        Pengaduan Masyarakat
+      ONLINE REPORT PUSH
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
           <div class="row">
             <div class="col-6 collapse-brand">
               <a href="/">
-               Pengaduan Masyarakat
+              ONLINE REPORT PUSH
               </a>
             </div>
             <div class="col-6 collapse-close">
@@ -60,13 +60,13 @@
   <!-- Main content -->
   <div class="main-content">
     <!-- Header -->
-    <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
+    <div class="header bg-gradient-primary py-4 py-lg-6 pt-lg-7">
       <div class="container">
         <div class="header-body text-center mb-7">
           <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6 col-md-8 px-5">
               <h1 class="text-white">Register</h1>
-              <p class="text-lead text-white">Silahkan isi form dibawah ini untuk membuat akun baru.</p>
+              <p class="text-lead text-white">Please fill in the form below to create a new account.</p>
             </div>
           </div>
         </div>
@@ -81,9 +81,9 @@
     <div class="container mt--8 pb-5">
         <!-- Table -->
         <div class="row justify-content-center">
-          <div class="col-lg-6 col-md-8">
+          <div class="col-lg-6 col-md-5">
             <div class="card bg-secondary border-0">
-              <div class="card-header bg-transparent pb-5">
+              <div class="card-header bg-transparent pb-2">
                 <!-- with google -->
                 {{-- <div class="text-muted text-center mt-2 mb-4"><small>Sign up with</small></div>
                 <div class="text-center">
@@ -109,7 +109,7 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text"></span>
                           </div>
-                          <input type="number" value="{{ old('nik') }}" class="form-control @error('nik') is-invalid @enderror" name="nik" id="nik" placeholder="NIK">
+                          <input type="number" value="{{ old('nik') }}" class="form-control @error('nik') is-invalid @enderror" name="nik" id="nik" placeholder="Student ID">
                             @error('nik')
                                 <div class="invalid-feedback">
                                     {{ $message }}
@@ -122,7 +122,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"></span>
                       </div>
-                      <input type="text" value="{{ old('name') }}" class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="Nama">
+                      <input type="text" value="{{ old('name') }}" class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="Name">
                         @error('name')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -161,7 +161,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"></span>
                       </div>
-                      <input type="number " value="{{ old('telp') }}" class="form-control @error('telp') is-invalid @enderror" name="telp" id="telp" placeholder="No Telpon">
+                      <input type="number " value="{{ old('telp') }}" class="form-control @error('telp') is-invalid @enderror" name="telp" id="telp" placeholder="Phone Number">
                         @error('telp')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -174,7 +174,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"></span>
                       </div>
-                      <textarea type="text" value="{{ old('alamat') }}" class="form-control @error('alamat') is-invalid @enderror" name="alamat" id="alamat" placeholder="Alamat"></textarea>
+                      <textarea type="text" value="{{ old('alamat') }}" class="form-control @error('alamat') is-invalid @enderror" name="alamat" id="alamat" placeholder="NumberRoom"></textarea>
                         @error('alamat')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -188,9 +188,9 @@
                         <span class="input-group-text"></span>
                       </div>
                         <select name="jenis_kelamin" class="custom-select @error('jenis_kelamin') is-invalid @enderror">
-                                <option value="">Silahkan Pilih Jenis Kelamin Anda</option>
-                                <option value="Laki-laki">Laki-laki</option>
-                                <option value="Perempuan">Perempuan</option>
+                                <option value="">Please Select Your Gender</option>
+                                <option value="Laki-laki">Male</option>
+                                <option value="Perempuan">Female</option>
                         </select>
                         @error('jenis_kelamin')
                         <div class="invalid-feedback">
@@ -200,7 +200,7 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <div class="input-group input-group-merge input-group-alternative mb-3">
+                    <!-- <div class="input-group input-group-merge input-group-alternative mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text"></span>
                       </div>
@@ -211,8 +211,8 @@
                             </div>
                         @enderror
                     </div>
-                  </div>
-                  <div class="form-group">
+                  </div> -->
+                  <!-- <div class="form-group">
                     <div class="input-group input-group-merge input-group-alternative mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text"></span>
@@ -224,8 +224,8 @@
                             </div>
                         @enderror
                     </div>
-                  </div>
-                  <div class="form-group">
+                  </div> -->
+                  <!-- <div class="form-group">
                     <div class="input-group input-group-merge input-group-alternative mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text"></span>
@@ -237,14 +237,14 @@
                             </div>
                         @enderror
                     </div>
-                  </div>
+                  </div> -->
                   <div class="form-group">
                     <div class="input-group input-group-merge input-group-alternative mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text"></span>
                       </div>
                         <select name="province_id" class="custom-select @error('province_id') is-invalid @enderror" id="province_id">
-                          <option value="">-- Pilih Provinsi --</option>
+                          <option value="">-- Select dormitory type --</option>
                           @foreach($provinces as $province)
                           <option value="{{ $province->id }}">{{ $province->name }}</option>
                           @endforeach
@@ -256,7 +256,7 @@
                     @enderror
                     </div>
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <div class="input-group input-group-merge input-group-alternative mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text"></span>
@@ -300,7 +300,7 @@
                         </div>
                     @enderror
                     </div>
-                  </div>
+                  </div> -->
                   <div class="form-group">
                     <div class="input-group input-group-merge input-group-alternative">
                       <div class="input-group-prepend">
@@ -326,14 +326,14 @@
                     </div>
                   </div> -->
                   <div class="text-center">
-                    <button type="submit"  class="btn btn-primary mt-4">Buat Akun</button>
+                    <button type="submit"  class="btn btn-primary mt-4">Create Account</button>
                   </div>
                 </form>
               </div>
             </div>
-            <div class="row mt-3">
+            <div class="row mt-2">
                 <div class="col-12 text-right">
-                  <a href="{{ url('login')}}" class="text-light"><small>Sudah punya akun?</small></a>
+                  <a href="{{ url('login')}}" class="text-black"><small>Have an account?</small></a>
                 </div>
               </div>
           </div>
@@ -345,7 +345,7 @@
     <div class="container">
 
           <div class="copyright text-center text-muted">
-            &copy; Copyright <strong><span><a href="" target="_blank">Bayu Prayoga</a></span></strong>.SMK Informatika Utama
+            &copy; Copyright <strong><span><a href="" target="_blank">PresidentUniversityStudentHousing</a></span></strong>
           </div>
     </div>
   </footer>

@@ -12,7 +12,7 @@
           <div class="header-body">
             <div class="row align-items-center py-4">
               <div class="col-lg-6 col-7">
-                <h6 class="h2 text-white d-inline-block mb-0">Tanggapan</h6>
+                <h6 class="h2 text-white d-inline-block mb-0">Response</h6>
                 <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                   {{-- <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                     <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
@@ -31,38 +31,38 @@
           <div class="col-xl-12 order-xl-1">
             <div class="card">
               <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-                <h3>Data Pengaduan</h3>
+                <h3> Report Data</h3>
               </div>
               <div class="card-body">
                 <table class="table">
                     <tbody>
                         <tr>
-                            <th>NIK</th>
+                            <th>Student ID</th>
                             <td>:</td>
                             <td>{{ $pengaduan->nik }}</td>
                         </tr>
                         <tr>
-                            <th>Nama</th>
+                            <th>Name</th>
                             <td>:</td>
                             <td>{{ $pengaduan->user->name }}</td>
                         </tr>
                         <tr>
-                            <th>Tanggal Pengaduan</th>
+                            <th>Date of complaint</th>
                             <td>:</td>
                             <td>{{ \Carbon\Carbon::parse($pengaduan->tgl_pengaduan)->format('d-m-Y') }}</td>
                         </tr>
                         <tr>
-                            <th>Judul Laporan</th>
+                            <th>Report title</th>
                             <td>:</td>
                             <td>{{ $pengaduan->judul_laporan }}</td>
                         </tr>
                         <tr>
-                            <th>Isi Laporan</th>
+                            <th>Content of report</th>
                             <td>:</td>
                             <td>{{ $pengaduan->isi_laporan }}</td>
                         </tr>
                         <tr>
-                            <th>Tanggal Kejadian</th>
+                            <th>Event Date</th>
                             <td>:</td>
                             <td>{{ \Carbon\Carbon::parse($pengaduan->tgl_kejadian)->format('d-m-Y') }}</td>
                         </tr>
@@ -80,12 +80,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Lokasi Kejadian</th>
+                            <th>Location</th>
                             <td>:</td>
                             <td>{{ $pengaduan->lokasi_kejadian }}</td>
                         </tr>
                         <tr>
-                          <th>Foto Kejadian</th>
+                          <th>Event photo</th>
                           <td>:</td>
                           <td><img src="{{ Storage::url($pengaduan->foto) }} " class="card-img"></td>
                         </tr>
@@ -104,7 +104,7 @@
               <div class="card-header">
                 <div class="row align-items-center">
                   <div class="col-8">
-                    <h3 class="mb-0">Tanggapan</h3>
+                    <h3 class="mb-0">Response</h3>
                   </div>
                 </div>
               </div>
@@ -119,26 +119,26 @@
                         <select name="status" class="form-control" id="status">
                             @if ($pengaduan->status == '0')
                                 <option selected value="0">Pending</option>
-                                <option value="proses">Proses</option>
-                                <option value="selesai">Selesai</option>
+                                <option value="proses">Process</option>
+                                <option value="selesai">Done</option>
                             @elseif($pengaduan->status == 'proses')
                                 <option value="0">Pending</option>
-                                <option selected value="proses">Proses</option>
-                                <option value="selesai">Selesai</option>
+                                <option selected value="proses">Process</option>
+                                <option value="selesai">Done</option>
                             @else
                                 <option value="0">Pending</option>
-                                <option value="proses">Proses</option>
-                                <option selected value="selesai">Selesai</option>
+                                <option value="proses">Process</option>
+                                <option selected value="selesai">Done</option>
                             @endif
                         </select>
                       </div>
                     <div class="form-group">
-                      <label class="form-control-label">Tanggapan</label>
-                      <textarea rows="4" class="form-control" name="tanggapan" id="tanggapan" placeholder="Ketik tanggapan">{{ $tanggapan->tanggapan ?? '' }}</textarea>
+                      <label class="form-control-label">Response</label>
+                      <textarea rows="4" class="form-control" name="tanggapan" id="tanggapan" placeholder="Type Response">{{ $tanggapan->tanggapan ?? '' }}</textarea>
                     </div>
                   </div>
 
-                  <button type="submit" class="btn btn-primary">Kirim</button>
+                  <button type="submit" class="btn btn-primary">Send</button>
                 </form>
               </div>
             </div>

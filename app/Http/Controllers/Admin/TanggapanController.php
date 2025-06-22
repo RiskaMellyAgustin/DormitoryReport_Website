@@ -29,7 +29,7 @@ class TanggapanController extends Controller
                 return 'success';
             }
 
-            return redirect()->route('pengaduan.show', ['id_pengaduan' => $request->id_pengaduan, 'pengaduan' => $pengaduan, 'tanggapan' => $tanggapan])->with(['status' => 'Berhasil Ditanggapi!']);
+            return redirect()->route('pengaduan.show', ['id_pengaduan' => $request->id_pengaduan, 'pengaduan' => $pengaduan, 'tanggapan' => $tanggapan])->with(['status' => 'Responded Successfully!']);
         } else {
             $pengaduan->update(['status' => $request->status]);
 
@@ -44,7 +44,7 @@ class TanggapanController extends Controller
                 return 'success';
             }
 
-            return redirect()->route('pengaduan.show', ['id_pengaduan' => $request->id_pengaduan, 'pengaduan' => $pengaduan, 'tanggapan' => $tanggapan])->with(['status' => 'Berhasil Ditanggapi!']);
+            return redirect()->route('pengaduan.show', ['id_pengaduan' => $request->id_pengaduan, 'pengaduan' => $pengaduan, 'tanggapan' => $tanggapan])->with(['status' => 'Responded Successfully!']);
         }
     }
 }

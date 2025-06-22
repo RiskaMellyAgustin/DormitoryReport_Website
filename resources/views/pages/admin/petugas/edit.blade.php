@@ -37,7 +37,7 @@
                   <!-- Petugas -->
 
                     <div class="form-group">
-                      <label class="form-control-label">Nama Petugas</label>
+                      <label class="form-control-label">Name Officer</label>
                       <input type="text" value="{{ $petugas->nama_petugas}}" class="form-control" name="nama_petugas" id="nama_petugas" required>
                     </div>
                     <div class="form-group">
