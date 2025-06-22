@@ -120,10 +120,6 @@ Dikembangkan ulang dan dimodifikasi oleh:
 
 Open-source project. Silakan modifikasi atau kontribusi untuk pengembangan lebih lanjut.
 
-````
 
----
-
-K
 
 
